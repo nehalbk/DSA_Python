@@ -63,21 +63,18 @@ if __name__ == "__main__":
 """"
 Explanation:
 
-1. Initialization:
+1. Initialize two pointers, l and r, to the first and second elements of the prices array.
+2. Initialize maxProf to 0 to store the maximum profit.
+3. Iterate through the prices array using the while loop.
+4. If the price at l is less than the price at r, calculate the profit by selling at r and buying at l. 
+    Update maxProf with the maximum of its current value and the calculated profit.
+5. If the price at l is greater than or equal to the price at r, update the left pointer l to be equal to r. 
+    This resets the potential buying position.
+6. Move the right pointer r to the next index.
+7. After the loop, return the maximum profit stored in maxProf.
 
-    i is the pointer for the last element in nums1.
-    j is the pointer for the last element in nums2.
-    k is the pointer for the position in the merged result array (nums1).
-
-2. Merging in Reverse Order:
-
-    We start from the end of both arrays-lists (nums1 and nums2) and compare elements.
-    The larger element is placed at the end of the merged array (nums1).
-    We move the pointers accordingly.
-
-3. Copying Remaining Elements:
-
-    After merging, if there are remaining elements in nums2, we copy them to the merged array (nums1).
-    We continue updating pointers and copying until both arrays-lists are fully merged.
+The algorithm efficiently determines the maximum profit by maintaining a potential buying position and adjusting it 
+based on potential selling positions. The time complexity is O(n), where n is the length of the prices array, as the 
+algorithm iterates through the array once.
     
 """
