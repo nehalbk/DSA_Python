@@ -3,10 +3,7 @@
 Problem:
 
 58. Length of Last Word
-Solved
-Easy
-Topics
-Companies
+
 Given a string s consisting of words and spaces, return the length of the last word in the string.
 
 A word is a maximal
@@ -39,7 +36,7 @@ s consists of only English letters and spaces ' '.
 There will be at least one word in s.
 
 Time Complexity:
-O(m + n)
+O(n)
 
 Space Complexity:
 O(1)
@@ -70,21 +67,28 @@ if __name__ == "__main__":
 """"
 Explanation:
 
-1. Initialization:
+Approach:
+    The function lengthOfLastWord is designed to find the length of the last word in a given string s. 
+    The approach used is to iterate through the string from right to left and count the characters of the last word 
+        until a space character is encountered.
 
-    i is the pointer for the last element in nums1.
-    j is the pointer for the last element in nums2.
-    k is the pointer for the position in the merged result array (nums1).
+Explanation:
 
-2. Merging in Reverse Order:
+    Initialize a counter c to 0.
+    Iterate through the characters of the string s from right to left.
+    Increment the counter c as long as non-space characters are encountered.
+    When a space character is encountered and the counter c is already greater than 0, return the value of c as it 
+        represents the length of the last word.
+    If the loop completes and there is no space character, return the final value of the counter c.
 
-    We start from the end of both arrays-lists (nums1 and nums2) and compare elements.
-    The larger element is placed at the end of the merged array (nums1).
-    We move the pointers accordingly.
+Time Complexity:
 
-3. Copying Remaining Elements:
+    The time complexity of the program is O(n), where n is the length of the input string s.
+    The loop iterates through the string once, and each iteration involves constant-time operations.
 
-    After merging, if there are remaining elements in nums2, we copy them to the merged array (nums1).
-    We continue updating pointers and copying until both arrays-lists are fully merged.
+Space Complexity:
+
+    The space complexity is O(1), as the program uses a constant amount of space regardless of the size of the input.
+    The only variable used is c, and it does not depend on the length of the input string.
     
 """
