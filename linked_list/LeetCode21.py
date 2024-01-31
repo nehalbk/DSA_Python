@@ -31,10 +31,10 @@ The number of nodes in both lists is in the range [0, 50].
 Both list1 and list2 are sorted in non-decreasing order.
 
 Time Complexity:
-O(n)
+O(n+m)
 
 Space Complexity:
-O(n)
+O(1)
 
 """
 from typing import Optional
